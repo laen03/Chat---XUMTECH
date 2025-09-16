@@ -1,0 +1,52 @@
+.cardContainer{
+  width: 300px;
+  height: 500px;
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+
+.card-header{
+  background-color: #5aacca;
+  color: white;
+  font-weight: 700;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  background-image: url('https://wallpapershome.com/images/pages/pic_v/26872.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sendImg:active{
+  transform: scale(0.8);
+}
+
+.sentMsg{
+  display: block;
+  float: right;
+  background-color: white;
+  min-width: 50.01%;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.receivedMsg{
+  display: block;
+  float: left;
+  background-color: rgb(237, 237, 237);;
+  min-width: 50.01%;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.messageContainer {
+  max-height: 370px;
+  overflow: scroll;
+  padding: 0.3rem;
+}

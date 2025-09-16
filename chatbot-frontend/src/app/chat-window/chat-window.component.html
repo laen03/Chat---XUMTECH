@@ -1,0 +1,28 @@
+<p>chat-window works!</p>
+<div class="card text-center cardContainer">
+  <div class="card-header">
+    Chat-bot
+  </div>
+  <div class="card-body">
+    <div id="messageContainer" class="messageContainer h-100">
+      <p *ngFor="let msg of messagesList" class="msj p-2"
+        [ngClass]="(msg.sender===meVariable)? 'sentMsg' : 'receivedMsg'">
+        {{msg.text}}
+      </p>
+    </div>
+  </div>
+
+  <form class="card-footer text-muted" (ngSubmit)="sendMessage()">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Ingresa tu pregunta" [(ngModel)]="newMessage"
+        [ngModelOptions]="{standalone: true}">
+      <div class="input-group-append" (click)="sendMessage()">
+        <span class="input-group-text" id="basic-addon2">
+          <img class="sendImg"
+            src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/send-icon.png"
+            width="25px">
+        </span>
+      </div>
+    </div>
+  </form>
+</div>
